@@ -13,43 +13,48 @@
 - And use this client in the app.module.ts
 
 
-### 1. Basic queries: Get all conferences
- - The main root will display the Conferences component
- - Write a query to fetch all conferences.
- - Iterate on conferences and ConferenceOverView component
- - Understand how data are passed in a component
- - Understand benefits of Fragments: Usage in other component, propTypes check.
- - Understand the HOC from apollo graphql and waitForGraphql
+### 1. Basic queries: Get all conferences 
+- What you will learn:
+  - Write a query
+- Todo:
+  - Write a query to fetch all conference using glq tags in 
+    conference.apollo-query.ts. You will find all fields required in the 
+    conference-card.component.html
+  - Use the query in conference-card-list.component.ts
 
- ### 2. Basic queries: Conference details
- - In ConferenceDetails:
- - Understand how you can add variables to your queries/mutations (with props access)
- - Understand how variables are used in the query function and in the query itself
- (the id should be required)
- alias the query, call it conference
- - You should only use fragments in the query on each Type!
+### 2. Basic queries: Conference details
+- What you will learn:
+  - Understand how you can add variables to your queries/mutations 
+  - Understand how variables are used in the query function and in the query itself
+  (the id should be required)
+- TODO:
+  - Write a query to fetch the details of a conference (DetailedConferenceQuery
+    in conference.apollo-query.ts . You will find all fields required in the 
+    conference-details-level.component.html and sponsor-box.component.html
+  - In ConferenceDetails: Implement all todos :p
+    Hint: to create the speaker array, you should look at the talks fields
 
- ### 3. Basic mutations : Authentication
- - Fix the Registration and login components
- - Write a basic mutation
- - Understand how variables are passed in mutations
- - Understand how the mutation is available in your component
+### 3. Basic mutations : Authentication ( Register/ login button)
+- What you will learn:
+  - Write a basic mutation
+  - Understand how variables are passed in mutations
+  - Understand how the mutation is available in your component
+- TODO:
+  - Fix the register and login components by implementing all todos
+ 
+### 4. Advanced queries PART 1
+- What you will learn:
+  - Mixin mutations and queries in one component
+  - Write a query to get the list of conferences on a particular page
+  - Write a mutation to delete a conference
+  - Understand how you pass variables
+  - Understand how apollo passes data in component
+  - Understand pagination
+- TODO (Don't take care of the Conference component, YET!)
+  - In the conference-table-list component, fix all todos
+  - In the talks-table-list component, fix all todos
 
- ### 4. Advanced queries PART 1
- - Mixin mutations and queries in one component
-(Don't take care of the Conference component, YET!)
- - In the management conferences component
- - Write a query to get the list of conferences on a particular page
- - Write a mutation to delete a conference
- - Understand how you pass variables
- - Understand how apollo passes data in component
- - Understand pagination
-
- - in the management talks component
- - write a query to get all talks in one page
- - write a mutation to delete a talk
-
- ### 5. Advanced queries PART 2
+### 5. Advanced queries PART 2
   - The management/Conference component should add a conference if there's no
   conference id in the path params.
   - If there's an id in the path, it means you need to fetch that conference
@@ -74,5 +79,4 @@
 
 - The only thing you have to write now, it a chat application in each conference detail.
 Good luck
-
 
